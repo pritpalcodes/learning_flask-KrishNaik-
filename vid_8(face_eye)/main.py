@@ -12,7 +12,7 @@ def gen_frames():
         if not success:
             break
         else:
-            detector=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+            detector=cv2.CascadeClassifier('Hhaarcascade_frontalface_default.xml')
             faces=detector.detectMultiScale(frame,1.1,7)
              #Draw the rectangle around each face
             for (x, y, w, h) in faces:
