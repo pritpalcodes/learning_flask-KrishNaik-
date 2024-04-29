@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Live Streaming</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <h3 class="mt-5">Live Streaming</h3>
+          <img id="video_feed" width="50%" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript code to continuously update the video feed
+      function updateVideo() {
+        var img = document.getElementById('video_feed');
+        img.src = "{{ url_for('video_feed') }}";
+        setTimeout(updateVideo, 100); // Update every 100 milliseconds
+      }
+      updateVideo(); // Start updating the video feed
+    </script>
+  </body>
+</html>
